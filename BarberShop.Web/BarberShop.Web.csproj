@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <None Remove="appsettings.json.example" />
   </ItemGroup>
 
@@ -15,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+=======
+>>>>>>> dev-Sebastian
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
