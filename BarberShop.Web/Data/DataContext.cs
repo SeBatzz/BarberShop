@@ -13,7 +13,8 @@ namespace BarberShop.Web.Data
         }
 
 
-        public DbSet<Barber> Barbers { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Haircut> Haircuts { get; set; }
 
     }
 }

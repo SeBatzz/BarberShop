@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BarberShop.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240920000003_AddBarberTable")]
-    partial class AddBarberTable
+    [Migration("20241006003451_AddCategoriesTable")]
+    partial class AddCategoriesTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace BarberShop.Web.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("BarberShop.Web.Data.Entities.Barber", b =>
+            modelBuilder.Entity("BarberShop.Web.Data.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,22 +32,26 @@ namespace BarberShop.Web.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("Availability")
-                        .HasColumnType("bit");
+                    b.Property<string>("AgeGroup")
+                        .IsRequired()
+                        .HasMaxLength(32)
+                        .HasColumnType("nvarchar(32)");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasMaxLength(32)
+                        .HasColumnType("nvarchar(32)");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(32)
+                        .HasColumnType("nvarchar(32)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
+                    b.Property<bool>("Trending")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Barbers");
+                    b.ToTable("Categories");
                 });
 #pragma warning restore 612, 618
         }

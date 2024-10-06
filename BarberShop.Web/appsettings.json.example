@@ -7,7 +7,7 @@
   },
 
   "ConnectionStrings": {
-    "MyConnection": "Server=;Database=BarberShop;User Id=;Password=;Encrypt=False;"
+    "MyConnection": "Server=;Database=;User Id=;Password=;Encrypt=False;"
   },
   "AllowedHosts": "*"
 

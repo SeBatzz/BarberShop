@@ -8,12 +8,13 @@ namespace BarberShop.Web.Data.Entities
         public int Id { get; set; }
 
 
-        [Display (Name = "Categorita")]
-        [Required(ErrorMessage = "Este campo '{0}' es obligatorio")]
+        [Display (Name = "Categoria")]
+        [MaxLength(32,ErrorMessage = "Este campo '{0}' es obligatorio")]
         public string CategoryName { get; set; } //Nombre de la categoria
 
 
         [Display (Name = "Descripcion")]
+        [MaxLength(32)]
         public string? Description { get; set; } //una breve descripcion
 
 
@@ -23,6 +24,7 @@ namespace BarberShop.Web.Data.Entities
 
 
         [Display(Name = "Edad Del Estilo")]
+        [MaxLength(32)]
         public string AgeGroup { get; set; } //una breve descripcion
 
 
