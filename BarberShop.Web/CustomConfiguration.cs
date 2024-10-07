@@ -31,7 +31,7 @@ namespace BarberShop.Web
 
         }
 
-        public static void AddServices(this  WebApplicationBuilder builder) 
+        public static void AddServices( WebApplicationBuilder builder) 
         { 
             builder.Services.AddScoped<ICategoriesService, CategoriesService>();
         
