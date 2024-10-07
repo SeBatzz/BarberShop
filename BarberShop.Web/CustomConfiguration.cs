@@ -30,11 +30,18 @@ namespace BarberShop.Web
 
 
         }
+<<<<<<< HEAD
 
         public static void AddServices(this  WebApplicationBuilder builder) 
         { 
             builder.Services.AddScoped<ICategoriesService, CategoriesService>();
         
+=======
+        public static void AddServices(this WebApplicationBuilder builder)
+        {
+            //services
+            builder.Services.AddScoped<IHaircutServices, HaircutServices>();
+>>>>>>> a41a47080a74ab7afd1457f9ad35400e517e3ca5
         }
     }       
 }
