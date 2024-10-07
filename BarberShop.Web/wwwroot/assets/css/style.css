@@ -14,9 +14,9 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  background: #f6f9ff;
-  color: #444444;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f5f5dc; /* Color de fondo */
+    color: #000; /* Color del texto */
 }
 
 a {
@@ -222,6 +222,7 @@ h6 {
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+ 
 }
 
 .card-header,

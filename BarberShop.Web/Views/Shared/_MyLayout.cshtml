@@ -28,15 +28,17 @@
 <body>
 
 
-
+    <!-- ======= Header ======= -->
     @Html.Partial("_Header")
 
 
 
-
+    <!-- ======= SideBar ======= -->
     @Html.Partial("_Sidebar")
 
 
+
+    <!-- ======= Body ======= -->
     <main id="main" class="main">
 
 
@@ -50,14 +52,16 @@
 
     <!-- ======= Footer ======= -->
     @Html.Partial("_Footer")
-
-
  
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+
+
     <!-- Scripts -->
     @Html.Partial("_Scripts")
+
+    @await RenderSectionAsync("Scripts", required: false)
 
 
 </body>

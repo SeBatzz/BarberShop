@@ -25,7 +25,7 @@ namespace BarberShop.Web.Data.Entities
 
         [Display(Name = "Edad Del Estilo")]
         [MaxLength(32)]
-        public string AgeGroup { get; set; } //una breve descripcion
+        public string AgeGroup { get; set; }   //Tal vez halla q cambiar el tipo de dato a Int por compatibilidad con los rangos de NiceAdmin
 
 
 

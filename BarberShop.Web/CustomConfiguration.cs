@@ -1,4 +1,5 @@
 ﻿using BarberShop.Web.Data;
+using BarberShop.Web.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,9 +19,22 @@ namespace BarberShop.Web
 
             });
 
+
+
+            // Services Here
+
+            AddServices(builder);
+
+
             return builder;
 
 
+        }
+
+        public static void AddServices(this  WebApplicationBuilder builder) 
+        { 
+            builder.Services.AddScoped<ICategoriesService, CategoriesService>();
+        
         }
     }       
 }
