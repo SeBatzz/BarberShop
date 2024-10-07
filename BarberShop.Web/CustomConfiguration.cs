@@ -1,4 +1,5 @@
 ﻿using BarberShop.Web.Data;
+using BarberShop.Web.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,11 @@ namespace BarberShop.Web
             return builder;
 
 
+        }
+        public static void AddServices(this WebApplicationBuilder builder)
+        {
+            //services
+            builder.Services.AddScoped<IHaircutServices, HaircutServices>();
         }
     }       
 }
